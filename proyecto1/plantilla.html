@@ -4,17 +4,23 @@
         <link rel="stylesheet" type="text/css" 
             href="Users/anabelen/Desktop\AngularJS\librerias\bootsrap\js\bootstrap.min.css" />
     </head>
-    
-    <body ng-controller="StoreController as store">
-        <div>
-            <h1> {{store.product.name}} </h1>
-            <h2> ${{store.product.price}} </h2>
-            <p> {{store.product.description}} </p>
-            <button ng-show="store.product.canPurchase"> Add </button>
+    <body>
+        <div ng-controller="StoreController">
+            <h1> {{name + " " + apellido}} </h1>
         </div>
         <script type="text/javascript"
-            src="Users/anabelen/Desktop\AngularJS\librerias\angular.min.js">
+            src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js">
         </script>
-        <script type="text/javascript" src="js/app.js"></script>
+        <script> 
+            // Creación del modulo (engloba los controladores,rutas y demas)
+            var app = angular.module("store", []);
+
+            // añadimos un controlador
+            app.controller("StoreController", function($scope){
+                $scope.name = "Ana";
+                $scope.apellido = "Gutierrez";
+            });
+
+        </script> 
     </body>
 </html>
