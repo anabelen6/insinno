@@ -1,6 +1,6 @@
 (function(){
     var app = angular.module('store', ['ngRoute']);
-
+    
     app.controller('StoreController', function(){
         this.product = gem;
     });
