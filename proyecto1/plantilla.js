@@ -9,6 +9,6 @@
 var gem = {
     name: 'Doce',
     price: 2.95,
-    description: 'prueba description'
+    description: 'prueba description',
     canPurchase: false
 }
